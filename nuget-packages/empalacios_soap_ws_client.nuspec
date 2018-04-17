@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+    <metadata>
+        <id>empalacios.soap_ws_client.dll</id>
+        <version>1.0.0</version>
+        <authors>Eduardo Manuel Palacios Tebalán</authors>
+        <owners>manuelpalacios</owners>
+        <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+        <projectUrl>https://github.com/empalacios/soap_client</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <releaseNotes>Initial release</releaseNotes>
+        <description>Dynamic soap webservice client</description>
+        <copyright>Copyright ©2018 Eduardo Palacios</copyright>
+        <tags>webservice client ws soap</tags>
+        <dependencies>
+        </dependencies>
+    </metadata>
+</package>

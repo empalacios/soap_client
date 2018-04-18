@@ -37,16 +37,26 @@ namespace soap_ws_client
 			headers.Add(header);
 		}
 		
-		public string callService(string methodName,
-		                          Dictionary<string, object> parameters) {
+		public string callServiceFunction(string functionName,
+		                                  Dictionary<string, object> parameters) {
 			HttpWebRequest request;
 			string requestContent;
 			string rawResponseContent;
 			
+			request = createRequest(functionName);
+			requestContent = createRequestContent(functionName, parameters);
+			rawResponseContent = makeRequest(request, requestContent);
+			return readContent(functionName, rawResponseContent);
+		}
+		
+		public void callServiceMethod(string methodName,
+		                              Dictionary<string, object> parameters) {
+			HttpWebRequest request;
+			string requestContent;
+			
 			request = createRequest(methodName);
 			requestContent = createRequestContent(methodName, parameters);
-			rawResponseContent = makeRequest(request, requestContent);
-			return readContent(methodName, rawResponseContent);
+			makeRequest(request, requestContent);
 		}
 		
 		protected abstract HttpWebRequest createRequest(string methodName);
